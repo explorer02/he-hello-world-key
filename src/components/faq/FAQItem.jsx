@@ -31,7 +31,7 @@ export const FAQItem = ({ item, onRemove, canRemove }) => {
               lineHeight: '20px',
               width: '16px',
             }}
-            onClick={() => setIsExpanded((p) => !p)}
+            onClick={() => setIsExpanded(true)}
           >
             {isExpanded ? '-' : '+'}
           </button>
