@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="1" failures="0" errors="0" time="1.224">
-  <testsuite name="src/__tests__/sample.test.js" errors="0" failures="0" skipped="0" timestamp="2024-08-21T07:20:13" time="0.864" tests="1">
-    <testcase classname="" name="Should render Hello World" time="0.012">
+<testsuites name="jest tests" tests="4" failures="0" errors="0" time="2.16">
+  <testsuite name="src/__tests__/main.test.js" errors="0" failures="0" skipped="0" timestamp="2024-08-26T08:29:39" time="1.615" tests="4">
+    <testcase classname="" name="should delete faq on clicking cross button" time="0.067">
+    </testcase>
+    <testcase classname="" name="should expand faq on clicking + &amp; collapse on -" time="0.025">
+    </testcase>
+    <testcase classname="" name="should expand faq on clicking + &amp; next item should not expand on deletion" time="0.022">
+    </testcase>
+    <testcase classname="" name="expand state should not change on different element deletion" time="0.019">
     </testcase>
   </testsuite>
 </testsuites>

@@ -1,7 +1,12 @@
 import React from 'react';
+import { FAQ } from './components/faq';
 
 export default function App() {
   return (
-    <h1>Hello World</h1>
+    <div style={{ padding: '16px', display: 'flex', justifyContent: 'center' }}>
+      <div style={{ width: '90%', maxWidth: '800px' }}>
+        <FAQ />
+      </div>
+    </div>
   );
 }
