@@ -54,7 +54,7 @@ export const FAQItem = ({ item, onRemove, canRemove }) => {
                 top: '8px',
                 right: '8px',
               }}
-              onClick={() => onRemove()}
+              onClick={onRemove}
             >
               X
             </button>
