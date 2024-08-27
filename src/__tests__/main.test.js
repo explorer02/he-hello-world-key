@@ -56,6 +56,8 @@ test('should expand faq on clicking + & next item should not expand on deletion'
   expect(() =>
     screen.getByText(/Yes, we offer international shipping/i)
   ).toThrow();
+
+  expect(() => screen.getByText(/How can I track my order?/i)).toThrow();
 });
 
 test('expand state should not change on different element deletion', async () => {
