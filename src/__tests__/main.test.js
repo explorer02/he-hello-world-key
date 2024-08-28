@@ -3,41 +3,37 @@ import { act, render, screen, within } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 
-test('should delete faq on clicking cross button', async () => {
+test('TEST CASE 1', async () => {
   render(<App />);
 
   const faqItem = screen.getByTestId('faq-1');
 
   const cross = await within(faqItem).findByTestId('cross');
 
-  act(() => {
-    userEvent.click(cross);
-  });
+  userEvent.click(cross);
 
-  expect(() => screen.getByTestId('faq-1')).toThrow();
+  expect(screen.queryByTestId('faq-1')).not.toBeInTheDocument();
 });
 
-test('should expand faq on clicking + & collapse on -', async () => {
+test('TEST CASE 2', async () => {
   render(<App />);
 
   const faqItem = screen.getByTestId('faq-2');
 
   const expand = await within(faqItem).findByTestId('expand');
 
-  act(() => {
-    userEvent.click(expand);
-  });
+  userEvent.click(expand);
 
   screen.getByText(/Once your order has shipped/i);
 
-  act(() => {
-    userEvent.click(expand);
-  });
+  userEvent.click(expand);
 
-  expect(() => screen.getByText(/Once your order has shipped/i)).toThrow();
+  expect(
+    screen.queryByText(/Once your order has shipped/i)
+  ).not.toBeInTheDocument();
 });
 
-test('should expand faq on clicking + & next item should not expand on deletion', async () => {
+test('TEST CASE 3', async () => {
   render(<App />);
 
   const faqItem = screen.getByTestId('faq-2');
@@ -45,22 +41,20 @@ test('should expand faq on clicking + & next item should not expand on deletion'
   const expand = await within(faqItem).findByTestId('expand');
   const cross = await within(faqItem).findByTestId('cross');
 
-  act(() => {
-    userEvent.click(expand);
-  });
+  userEvent.click(expand);
 
-  act(() => {
-    userEvent.click(cross);
-  });
+  userEvent.click(cross);
 
-  expect(() =>
-    screen.getByText(/Yes, we offer international shipping/i)
-  ).toThrow();
+  expect(
+    screen.queryByText(/Yes, we offer international shipping/i)
+  ).not.toBeInTheDocument();
 
-  expect(() => screen.getByText(/How can I track my order?/i)).toThrow();
+  expect(
+    screen.queryByText(/How can I track my order/i)
+  ).not.toBeInTheDocument();
 });
 
-test('expand state should not change on different element deletion', async () => {
+test('TEST CASE 4', async () => {
   render(<App />);
 
   const faqItem2 = screen.getByTestId('faq-2');
@@ -71,13 +65,9 @@ test('expand state should not change on different element deletion', async () =>
 
   const cross3 = await within(faqItem3).findByTestId('cross');
 
-  act(() => {
-    userEvent.click(expand2);
-  });
+  userEvent.click(expand2);
 
-  act(() => {
-    userEvent.click(cross3);
-  });
+  userEvent.click(cross3);
 
   screen.getByText(/Once your order has shipped/i);
 });

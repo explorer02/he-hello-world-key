@@ -4,13 +4,13 @@ FAQs
 
 ### Problem Statement
 
-For our FAQs screen, we need FAQ cards to be collapsible and deletable. Last FAQ will not be deletable.
+We need to enhance our FAQs screen by making the FAQ cards both collapsible and deletable, with the exception of the last FAQ card, which should not be deletable.
 
-FAQ Cards have already been implemented for you but its not working as expected.
+Although the FAQ cards have been implemented, they are not functioning as intended. To resolve this, we have two specific tasks:
 
 To make it work, we have two requirements
 
-**TASK 1**: Clicking + button on card should expand it
+**TASK 1**: Clicking +/- button on card should expand/collapse it
 **TASK 2**: Clicking X button on card should delete it
 
 ## Submission Instructions
