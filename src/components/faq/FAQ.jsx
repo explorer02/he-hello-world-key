@@ -12,7 +12,7 @@ export const FAQ = () => {
   };
 
   return (
-    <div style={{ display: 'flex', gap: '12px', flexDirection: 'column' }}>
+    <div className="flex gap-3 flex-col">
       {items.map((item) => (
         <FAQItem item={item} onRemove={onRemove} canRemove={items.length > 1} />
       ))}

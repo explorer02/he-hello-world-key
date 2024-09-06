@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="4" failures="0" errors="0" time="2.16">
-  <testsuite name="src/__tests__/main.test.js" errors="0" failures="0" skipped="0" timestamp="2024-08-26T08:29:39" time="1.615" tests="4">
-    <testcase classname="" name="should delete faq on clicking cross button" time="0.067">
+<testsuites name="jest tests" tests="4" failures="0" errors="0" time="1.827">
+  <testsuite name="src/__tests__/sample.test.js" errors="0" failures="0" skipped="3" timestamp="2024-09-06T06:39:46" time="1.441" tests="4">
+    <testcase classname="" name="should remove FAQ item when the cross button is clicked on card" time="0">
+      <skipped/>
     </testcase>
-    <testcase classname="" name="should expand faq on clicking + &amp; collapse on -" time="0.025">
+    <testcase classname="" name="should expand FAQ content when the + button is clicked and collapse it when the - button is clicked" time="0">
+      <skipped/>
     </testcase>
-    <testcase classname="" name="should expand faq on clicking + &amp; next item should not expand on deletion" time="0.022">
+    <testcase classname="" name="should not expand the next FAQ item after the current FAQ is deleted" time="0">
+      <skipped/>
     </testcase>
-    <testcase classname="" name="expand state should not change on different element deletion" time="0.019">
+    <testcase classname="" name="should retain the expanded state of an FAQ item when a different FAQ item is deleted" time="0.08">
     </testcase>
   </testsuite>
 </testsuites>

@@ -7,53 +7,28 @@ export const FAQItem = ({ item, onRemove, canRemove }) => {
     <div
       id={`faq-${item.id}`}
       data-testid={`faq-${item.id}`}
-      style={{
-        border: '1px solid grey',
-        borderRadius: '8px',
-        padding: '12px',
-      }}
+      className="border-gray-400 border rounded-lg p-3"
     >
-      <div
-        style={{
-          display: 'flex',
-        }}
-      >
-        <div
-          style={{
-            paddingRight: '8px',
-            flex: 'none',
-          }}
-        >
+      <div className="flex">
+        <div className="flex-none pr-2">
           <button
             data-testid="expand"
-            style={{
-              fontSize: '20px',
-              lineHeight: '20px',
-              width: '16px',
-            }}
+            className="text-xl leading-5 w-4"
             onClick={() => setIsExpanded(true)}
           >
             {isExpanded ? '-' : '+'}
           </button>
         </div>
 
-        <div style={{ flex: 1 }}>
+        <div className="flex-1">
           <div>{item.heading}</div>
         </div>
 
         {canRemove ? (
-          <div style={{ flex: 'none' }}>
+          <div className="flex-none">
             <button
               data-testid="cross"
-              style={{
-                border: '1px solid grey',
-                background: 'silver',
-                width: '24px',
-                height: '24px',
-                borderRadius: '100%',
-                top: '8px',
-                right: '8px',
-              }}
+              className="border border-gray-400 bg-slate-200 w-6 h-6 rounded-full top-2 right-2"
               onClick={onRemove}
             >
               X
@@ -61,9 +36,7 @@ export const FAQItem = ({ item, onRemove, canRemove }) => {
           </div>
         ) : null}
       </div>
-      {isExpanded ? (
-        <div style={{ padding: '0 20px' }}>{item.description}</div>
-      ) : null}
+      {isExpanded ? <div className="px-5 py-0">{item.description}</div> : null}
     </div>
   );
 };
