@@ -1,10 +1,10 @@
-import App from '../App';
+import { FAQ } from '../components/faq';
 import { act, render, screen, within } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 
 test('TEST CASE 1', async () => {
-  render(<App />);
+  render(<FAQ />);
 
   const faqItem = screen.getByTestId('faq-1');
 
@@ -16,7 +16,7 @@ test('TEST CASE 1', async () => {
 });
 
 test('TEST CASE 2', async () => {
-  render(<App />);
+  render(<FAQ />);
 
   const faqItem = screen.getByTestId('faq-2');
 
@@ -34,7 +34,7 @@ test('TEST CASE 2', async () => {
 });
 
 test('TEST CASE 3', async () => {
-  render(<App />);
+  render(<FAQ />);
 
   const faqItem = screen.getByTestId('faq-2');
 
@@ -55,7 +55,7 @@ test('TEST CASE 3', async () => {
 });
 
 test('TEST CASE 4', async () => {
-  render(<App />);
+  render(<FAQ />);
 
   const faqItem2 = screen.getByTestId('faq-2');
 
